@@ -1,6 +1,6 @@
 package com.example.demo.presentation;
 
-import com.example.demo.application.TeamService;
+import com.example.demo.application.MemberTeamService;
 import com.example.demo.application.dto.MemberTeamResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-public class TeamController {
+public class MemberTeamController {
 
-    private final TeamService teamService;
+    private final MemberTeamService teamService;
 
     @GetMapping("/teams")
     public ResponseEntity<Page<MemberTeamResponse>> findTeams(Pageable pageable) {
